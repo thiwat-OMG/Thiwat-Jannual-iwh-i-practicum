@@ -10,7 +10,7 @@ app.use(express.json());
 // * Please DO NOT INCLUDE the private app access token in your repo. Don't do this practicum in your normal account.
 const PRIVATE_APP_ACCESS = '';
 const CUSTOM_OBJECT_TYPE = "2-49324263";
-const HUBSPOT_API = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}?limit=10&properties=name&properties=vin&properties=year`;
+const HUBSPOT_API = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}?limit=10&properties=name&properties=vin&properties=year&properties=make`;
 
 
 // TODO: ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
