@@ -52,6 +52,7 @@ app.post("/submit-cobj", async (req, res) => {
       name: req.body.name,
       vin: req.body.vin,
       year: req.body.year,
+      make: req.body.make,
     },
   };
 
