@@ -25,7 +25,7 @@ app.get("/", async (req, res) => {
   const contacts = HUBSPOT_API;
 
   try {
-    const resp = await axios.get(contacts, { headers });
+    const resp = await axios.get(contacts, { headers: HEADERS });
     const data = resp.data.results;
     console.log(data);
     res.render("homepage", { title: "Cars | HubSpot APIs", data });
