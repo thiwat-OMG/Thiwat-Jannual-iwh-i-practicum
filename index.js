@@ -21,6 +21,20 @@ const HEADERS = {
 
 // TODO: ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
 
+app.get("/", async (req, res) => {
+  const contacts = HUBSPOT_API;
+
+  try {
+    const resp = await axios.get(contacts, { headers });
+    const data = resp.data.results;
+    console.log(data);
+    res.render("homepage", { title: "Cars | HubSpot APIs", data });
+  } catch (error) {
+    console.error(error);
+  }
+});
+
+
 
 // TODO: ROUTE 2 - Create a new app.get route for the form to create or update new custom object data. Send this data along in the next route.
 
