@@ -13,6 +13,12 @@ const CUSTOM_OBJECT_TYPE = "2-49324263";
 const HUBSPOT_API = `https://api.hubapi.com/crm/v3/objects/${CUSTOM_OBJECT_TYPE}?limit=10&properties=name&properties=vin&properties=year&properties=make`;
 
 
+const HEADERS = {
+  Authorization: `Bearer ${PRIVATE_APP_ACCESS}`,
+  "Content-Type": "application/json",
+};
+
+
 // TODO: ROUTE 1 - Create a new app.get route for the homepage to call your custom object data. Pass this data along to the front-end and create a new pug template in the views folder.
 
 
